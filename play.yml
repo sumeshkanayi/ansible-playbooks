@@ -1,6 +1,6 @@
 ---
-- name: install nginx
-  service:
-    name: "nginx"
-    state: "restarted"
-     
+- name: Run role
+  hosts: all
+  any_errors_fatal: true
+  roles:
+    - ansible-prometheus
